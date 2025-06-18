@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Farmer Dashboard - Bovine Care</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+
+</head>
+
+<body class="is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<div id="header"
+			style="background-image: url('assets/images/cattlesun.jpg'); background-size: cover; background-position: center;">
+			<div class="logo-container" style="display: flex; align-items: center; justify-content: center;">
+				<img src="assets/images/logo.png" alt="Bovine Care Logo" style="height: 120px; margin-right: 0px;">
+				<h1 style="text-align: center; margin-top: 40px; font-size: 120%; color: white;">
+					<a href="/" id="logo" style="color: white;">Bovine Care</a>
+				</h1>
+			</div>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li class="current"><a href="/farmerdashboard">Farmer Dashboard</a></li>
+					<li><a href="/about">About</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<!-- Main -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div class="row gtr-200">
+					<div class="col-8 col-12-narrower">
+						<div id="content">
+							<!-- Content -->
+							<article>
+								<header>
+									<h2>Welcome to Your Dashboard</h2>
+									<p>Upload images and detect diseases, and connect with your farming community and
+										experts.</p>
+								</header>
+
+								<span class="image featured"><img src="assets/images/phonewoman.jpg" alt="" /></span>
+
+								<p>Use the tools provided here to monitor your cattle’s health and engage with the
+									community.</p>
+
+
+								<!-- Disease Detection Upload Section -->
+								<section class="disease-detection-section"
+									style="margin-top: 30px; margin-bottom: 30px;">
+									<header>
+										<h3>Disease Detection</h3>
+										<p>Upload images or videos of your cattle to detect potential health issues.</p>
+									</header>
+
+									<div class="upload-container"
+										style="border: 2px dashed #ccc; border-radius: 10px; padding: 20px; text-align: center; margin-bottom: 20px;">
+										<div id="drop-area"
+											style="min-height: 150px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+											<img src="assets/images/upload.png" alt="Upload"
+												style="max-width: 64px; margin-bottom: 15px;">
+											<p>Drag and drop your files here or click to browse</p>
+											<p class="small-text" style="font-size: 0.8em; color: #888;">Supported
+												formats: JPG, PNG, MP4, MOV (Max size: 50MB)</p>
+
+											<input type="file" id="fileInput" name="fileInput" accept="image/*,video/*"
+												style="display: none;" multiple>
+											<button onclick="document.getElementById('fileInput').click();"
+												class="button" style="margin-top: 15px;">Browse Files</button>
+										</div>
+									</div>
+
+									<div id="preview-area" style="display: none; margin-top: 20px;">
+										<h4>Selected Files</h4>
+										<div id="file-preview-container"
+											style="display: flex; flex-wrap: wrap; gap: 10px;"></div>
+									</div>
+
+									<!-- Progress Indicator -->
+									<div id="progress-container" style="display: none; margin-top: 20px;">
+										<h4>Analysis Progress</h4>
+										<div style="background: #ddd; border-radius: 5px; height: 10px; width: 100%;">
+											<div id="progress-bar"
+												style="height: 10px; width: 0%; background: #4CAF50; border-radius: 5px;">
+											</div>
+										</div>
+										<p id="progress-text"
+											style="text-align: center; margin-top: 5px; font-size: 0.9em;">Uploading...
+										</p>
+									</div>
+
+									<div class="action-buttons"
+										style="display: flex; justify-content: center; gap: 15px; margin-top: 20px;">
+										<button id="analyze-btn" class="button primary" disabled>Analyze for
+											Diseases</button>
+										<button id="clear-btn" class="button alt" disabled>Clear Selection</button>
+									</div>
+
+
+
+
+
+									<div id="analysis-results" style="margin-top: 30px; display: none;">
+										<h4>Analysis Results</h4>
+										<div class="results-container"
+											style="border: 1px solid #ddd; border-radius: 5px; padding: 15px; background-color: #f9f9f9;">
+											<p>Your results will appear here after analysis.</p>
+										</div>
+									</div>
+
+
+
+
+								</section>
+							</article>
+						</div>
+					</div>
+					<div class="col-4 col-12-narrower">
+						<div id="sidebar">
+							<!-- Sidebar -->
+							<section>
+								<h3>Login to the Bovine Care Community community chats</h3>
+								<p>Login to your farmer community chat to connect with your farmer community.</p>
+
+							</section>
+							<!-- Chatbox Login Button -->
+							<section style="text-align: center; margin-top: 20px;">
+								<a href="http://localhost:8080" class="button">Login to Bovine Care Community</a>
+							</section>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	<!-- Footer -->
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<section class="col-6 col-12-narrower" style="margin: 0 auto;">
+					<h3>Get In Touch</h3>
+					<form id="contact-form">
+						<div class="row gtr-50">
+							<div class="col-6 col-12-mobilep">
+								<input type="text" name="user_name" id="name" placeholder="Name" required />
+							</div>
+							<div class="col-6 col-12-mobilep">
+								<input type="email" name="user_email" id="email" placeholder="Email" required />
+							</div>
+							<div class="col-12">
+								<textarea name="message" id="message" placeholder="Message" rows="5" required></textarea>
+							</div>
+							<div class="col-12">
+								<ul class="actions">
+									<li><button type="submit" class="button alt">Send Message</button></li>
+								</ul>
+							</div>
+						</div>
+					</form>
+					<p id="status-message"></p>
+					
+				</section>
+			</div>
+		</div>
+
+
+			<!-- Copyright -->
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; Bovine Care. All rights reserved</li>
+					<li>2024-2025</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/analysis.js" defer></script>
+		<script src="assets/js/contact.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+</body>
+
+</html>
