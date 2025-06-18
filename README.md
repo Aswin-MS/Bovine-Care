@@ -84,6 +84,7 @@ Bovine-Care/
 
   * `assets/js/doctorlogin.js`
   * `assets/js/farmerregister.js`
+  * * `assets/js/farmerlogin.js`
 
   These files contained sensitive Firebase API keys.
   You must **recreate these files manually** or configure Firebase securely (preferably via environment variables) for full authentication functionality.
